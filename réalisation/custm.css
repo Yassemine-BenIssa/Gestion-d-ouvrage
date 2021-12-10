@@ -1,0 +1,29 @@
+.sb-nav-fixed{
+    background-color: rgba(104, 141, 197, 0.877);
+}
+
+.sb-sidenav {
+    background-color: rgba(104, 141, 197, 0.877);
+}
+.sb-topnav{
+    background-color: rgba(22, 77, 158, 0.877) !important;
+}
+.sb-sidenav-footer{
+    background-color: rgba(68, 99, 146, 0.877) !important;
+}
+.card {
+    background-color: rgba(22, 77, 158, 0.877)!important;
+}
+.btn-primary:hover{
+    color: white;
+    background-color: rgba(68, 99, 146, 0.877) !important;
+    border-color: rgba(68, 99, 146, 0.877) !important;
+}
+.btn-secondary:hover{
+    color:white ;
+    background-color: rgba(165, 42, 26, 0.877) !important;
+    border-color:rgba(165, 42, 26, 0.877) !important;
+}
+#inputPrix{
+    width: 200px !important;
+}
