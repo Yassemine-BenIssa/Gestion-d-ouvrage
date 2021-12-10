@@ -4,18 +4,17 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <title>📖 Gestion d'Ouvrages</title>
-    <link href="style.css" rel="stylesheet" /> 
+    <link rel="shortcut icon" type="image/jpg" href="https://cdn.shopify.com/s/files/1/1061/1924/products/Open_Book_Emoji_large.png"/>
+    <title>Gestion d'Ouvrages</title>
+    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="custm.css">
-
-
+    <!-- Bootstrap -->
 </head>
-
-
+<!--  -->
 <body class="sb-nav-fixed">
     <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
         <!-- Navbar -->
-        <a class="navbar-brand ps-3" href="réalisation.html">Gestion d'Ouvrages v1.0</a>
+        <a class="navbar-brand ps-3" href="index.html">📘 Gestion d'Ouvrages v1.0 : </a>
         <!-- Sidebar -->
         <button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!"><i
                 class="fas fa-bars"></i></button>
@@ -44,36 +43,37 @@
         <div id="layoutSidenav_content">
             <main>
                 <div class="container-fluid px-4">
-                    <h1 class="mt-4">📚 gestion d'ouvrages : </h1>
+                    <h1 class="mt-4">📚 Gestion d'Ouvrages : </h1>
                     <ol class="breadcrumb mb-4">
-
-                    
                     </ol>
-                    <div class="card mb-4">
+                    <div>
+                        <button id="showFormBtn" class="btn btn-primary m-3"> Nouveau</button>
+                    </div>
+                    <div id="formCard" class="card mb-4 d-none">
 
                         <div class="card-header">
-                            <div>📝ouvrage : </div>
+                            <div>📝Ouvrages : </div>
                         </div>
                         <div class="card-body">
 
                             <form id="formSubmit"  class="row g-3">
-                                
-                                <div class="col-md-6">
+                                <!--  -->
+                                <div class="col-md-12">
                                     <label for="inputTitle" class="form-label">Titre :</label>
                                     <input required type="text" class="form-control" id="inputTitle" maxlength="30">
                                 </div>
-                                
-                                <div class="col-md-6">
+                                <!--  -->
+                                <div class="col-md-12">
                                     <label for="inputAuthor" class="form-label">Auteur : </label>
-                                    <input required type="text" class="form-control" id="inputAuthor" maxlength="30">
+                                    <input required type="text" class="form-control" id="inputAuthor" width="10px" maxlength="30">
                                 </div>
-                                
-                                <div class="col-12">
+                                <!--  -->
+                                <div class="col-6">
                                     <label for="inputPrix" class="form-label">Prix : </label>
                                     <input required type="number" step=any  class="form-control" id="inputPrix" maxlength="3">
                                 </div>
-                                
-                                <div class="col-12">
+                                <!--  -->
+                                <div class="col-6">
                                     <label for="inputDate" class="form-label">Date de : </label>
                                     <input required type="date" class="form-control" id="inputDate"
                                         placeholder="Apartment, studio, or floor">
@@ -88,7 +88,7 @@
                                     </select>
                                 </div>
                                 <div class="col-12">
-                                    <label for="crudType" class="form-label">Type : </label>
+                                    <label for="workType" class="form-label">Type : </label>
                                     <div class="form-check">
                                         <input required class="form-check-input" name="workType" value="Roman" type="radio" id="gridCheck">
                                         <label class="form-check-label" for="gridCheck">
@@ -111,7 +111,7 @@
 
                                 </div>
                                 <div class="col-12">
-                                    <button id="submitButton" type="submit" class="btn btn-primary">validé</button>
+                                    <button id="submitButton" type="submit" class="btn btn-primary"> Enregistrer</button>
                                 </div>
                             </form>
 
@@ -126,11 +126,11 @@
                                 <thead>
                                     <tr>
                                         <th>Titre</th>
-                                        <th>Auteur</th>
-                                        <th>Prix</th>
-                                        <th>Date de publication</th>
+                                        <th class="d-none d-lg-table-cell">Auteur</th>
+                                        <th class="d-none d-lg-table-cell">Prix</th>
+                                        <th class="d-none d-lg-table-cell">Date de publication</th>
                                         <th>Langue</th>
-                                        <th>Type</th>
+                                        <th class="d-none d-lg-table-cell">Type</th>
                                         <th>Actions</th>
                                     </tr>
                                 </thead>

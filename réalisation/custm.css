@@ -1,9 +1,9 @@
 .sb-nav-fixed{
-    background-color: rgba(104, 141, 197, 0.877);
+    background-color: rgba(104, 141, 197, 0.877) !important;
 }
 
 .sb-sidenav {
-    background-color: rgba(104, 141, 197, 0.877);
+    background-color: rgba(104, 141, 197, 0.877) !important;
 }
 .sb-topnav{
     background-color: rgba(22, 77, 158, 0.877) !important;
@@ -14,6 +14,18 @@
 .card {
     background-color: rgba(22, 77, 158, 0.877)!important;
 }
+.form-label{
+    color: white;
+}
+.card-header{
+    color: white;
+}
+.table{
+    color: white;
+}
+.form-label-check-label{
+    color: white;
+}
 .btn-primary:hover{
     color: white;
     background-color: rgba(68, 99, 146, 0.877) !important;
@@ -23,11 +35,8 @@
     color:white ;
     background-color: rgba(165, 42, 26, 0.877) !important;
     border-color:rgba(165, 42, 26, 0.877) !important;
+    
 }
-#inputPrix{
-    width: 200px !important;
-}
-#inputDate{
-    width: 300px;
-
+.form-control{
+    width: 200px;
 }
