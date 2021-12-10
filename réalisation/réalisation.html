@@ -1,92 +1,122 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <meta name="description" content="Interface de gestion des ouvrages" />
-    <meta name="author" content="ESSARRAJ Fouad" />
-    <title>Gestion des ouvrages</title>
-    <link href="https://cdn.jsdelivr.net/npm/simple-datatables@latest/dist/style.css" rel="stylesheet" />
-    <link href="style.css" rel="stylesheet" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js" crossorigin="anonymous">
-    </script>
+    <title>📖 Gestion d'Ouvrages</title>
+    <link href="style.css" rel="stylesheet" /> 
+
 </head>
 
+
 <body class="sb-nav-fixed">
-    <div id="layoutSidenav">
+    <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
+        <!-- Navbar -->
+        <a class="navbar-brand ps-3" href="réalisation.html">Gestion d'Ouvrages v1.0</a>
+        <!-- Sidebar -->
+        <button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!"><i
+                class="fas fa-bars"></i></button>
+    </nav>
+<div id="layoutSidenav">
+<div id="layoutSidenav_nav">
+<nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
+<div class="sb-sidenav-menu">
+<div class="nav">
+                        <a class="nav-link" href="réalisation.html">
+                            <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
+                            <!-- Tableau de bord -->
+                        </a>
+                        <a class="nav-link" href="gestion-ouvrages.html">
+                            <div class="sb-nav-link-icon"><i class="fas fa-book"></i></div>
+                            <!-- Ouvrages -->
+                        </a>
+                    </div>
+                </div>
+                <div class="sb-sidenav-footer">
+                    <div class="small">Logged in as:</div>
+                    🟢 admin
+                </div>
+            </nav>
+        </div>
         <div id="layoutSidenav_content">
             <main>
-                <div >
-                    <h1 >Ouvrages</h1>
+                <div class="container-fluid px-4">
+                    <h1 class="mt-4">📚 Tableau de bord : </h1>
                     <ol class="breadcrumb mb-4">
-                        <li ><a>Tableau de bord</a></li>
-                        <li >Ouvrages</li>
+                    
                     </ol>
+                    <div class="card mb-4">
 
-                     
-                        <div>
+                        <div class="card-header">
+                            <div>📝ouvrage : </div>
+                        </div>
+                        <div class="card-body">
 
-                            <form id="formSubmit" autocomplete="off">
+                            <form id="formSubmit"  class="row g-3">
+                                
                                 <div class="col-md-6">
-                                    <label for="inputTitle" >Title</label>
-                                    <input type="text"  id="inputTitle">
+                                    <label for="inputTitle" class="form-label">Titre :</label>
+                                    <input required type="text" class="form-control" id="inputTitle" maxlength="30">
                                 </div>
+                                
                                 <div class="col-md-6">
-                                    <label for="inputAuthor" >Auteur</label>
-                                    <input type="text" id="inputAuthor">
+                                    <label for="inputAuthor" class="form-label">Auteur : </label>
+                                    <input required type="text" class="form-control" id="inputAuthor" maxlength="30">
                                 </div>
+                                
                                 <div class="col-12">
-                                    <label for="inputPrix" >Prix</label>
-                                    <input type="number" id="inputPrix">
+                                    <label for="inputPrix" class="form-label">Prix : </label>
+                                    <input required type="number" step=any  class="form-control" id="inputPrix" maxlength="3">
                                 </div>
+                                
                                 <div class="col-12">
-                                    <label for="inputDate">Date de publication </label>
-                                    <input type="date" id="inputDate">
+                                    <label for="inputDate" class="form-label">Date de : </label>
+                                    <input required type="date" class="form-control" id="inputDate"
+                                        placeholder="Apartment, studio, or floor">
                                 </div>
                                 <div class="col-md-6">
-                                    <label for="inputLanguage">Langue</label>
-                                    <select id="inputLanguage">
+                                    <label for="inputLanguage" class="form-label">Langue : </label>
+                                    <select required id="inputLanguage" class="form-select">
                                         <option value="" disabled selected>choisir...</option>
                                         <option value="français">Français</option>
                                         <option value="anglais">Anglais</option>
                                         <option value="arabe">Arabe</option>
                                     </select>
                                 </div>
-                                
                                 <div class="col-12">
-                                    <label for="workType" class="form-label">Type</label>
-                                    <div>
-                                        <input value="Roman" name="workType" type="radio" id="gridCheck">
-                                        <label for="gridCheck">
+                                    <label for="crudType" class="form-label">Type : </label>
+                                    <div class="form-check">
+                                        <input required class="form-check-input" name="workType" value="Roman" type="radio" id="gridCheck">
+                                        <label class="form-check-label" for="gridCheck">
                                             Roman
                                         </label>
                                     </div>
-                                    <div>
-                                        <input value="Essai" name="workType" type="radio" id="gridCheck">
-                                        <label  for="gridCheck">
+                                    <div class="form-check">
+                                        <input required class="form-check-input" name="workType" value="Essai" type="radio" id="gridCheck">
+                                        <label class="form-check-label" for="gridCheck">
                                             Essai
                                         </label>
                                     </div>
 
-                                    <div>
-                                        <input  name="workType" value="Bande-Dessinée" type="radio" id="gridCheck">
-                                        <label  for="gridCheck">
+                                    <div class="form-check">
+                                        <input required class="form-check-input" name="workType" value="Bande-Dessinée"  type="radio" id="gridCheck">
+                                        <label class="form-check-label" for="gridCheck">
                                             Bande-Dessinée
                                         </label>
                                     </div>
 
                                 </div>
-                                <div>
-                                    <button id="submitButton" type="submit">Ajouter</button>
+                                <div class="col-12">
+                                    <button id="submitButton" type="submit" class="btn btn-primary">Ajouter</button>
                                 </div>
                             </form>
 
                         </div>
+                    </div>
                     <div class="card mb-4">
-                        <div>
-                            📘
+                        <div class="card-header">
+                            List des Ouvrages : 
                         </div>
                         <div class="card-body">
                             <table class="table" id="worksTable">
@@ -102,29 +132,28 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr>
-                                    </tr>
+
                                 </tbody>
                             </table>
                         </div>
                     </div>
                 </div>
             </main>
-            <footer class="py-4 bg-light mt-auto">
-                <div class="container-fluid px-4">
-                    <div class="d-flex align-items-center justify-content-between small">
-                        <div class="text-muted">Copyright &copy; Your Website 2021</div>
-                        <div>
-                            <a href="#">Privacy Policy</a>
+<!--  -->
+<footer class="py-4 bg-light mt-auto">
+<div class="container-fluid px-4">
+<div class="d-flex align-items-center justify-content-between small">
+<div class="text-muted">Copyright &copy; https://github.com/Yassemine-BenIssa</div>
+<div>
+<a href="#">Privacy Policy</a>
                             &middot;
-                            <a href="#">Terms &amp; Conditions</a>
-                        </div>
-                    </div>
-                </div>
-            </footer>
-        </div>
-    </div>
-    <script src="réalisation.js"></script>
+<a href="#">Terms &amp; Conditions</a>
+</div>
+</div>
+</div>
+</footer>
+</div>
+</div>
+<script src="réalisation.js"></script>
 </body>
-
 </html>
